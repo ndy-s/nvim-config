@@ -4,7 +4,7 @@ return {
   	event = "BufReadPre",
   	config = function()
    		local hipatterns = require("mini.hipatterns")
-   		
+
 		hipatterns.setup({
      		highlighters = {
    				-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'

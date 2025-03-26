@@ -3,11 +3,11 @@ return {
     	"nvim-treesitter/nvim-treesitter",
     	build = ":TSUpdate",
     	config = function()
-    		configs = require("nvim-treesitter.configs")
+    		local configs = require("nvim-treesitter.configs")
 			configs.setup({
             	-- A list of parser names, or "all"
             	ensure_installed = {
-                	"vimdoc", "javascript", "typescript", "c", "lua", "rust",
+                	"vimdoc", "javascript", "typescript", "lua",
                 	"jsdoc", "bash",
             	},
 
