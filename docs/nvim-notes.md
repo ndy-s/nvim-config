@@ -13,7 +13,7 @@ This will install my customized Neovim configuration with sensible defaults and 
 - `init.vim`: Legacy or alternative configuration file (located at `~/.config/nvim/init.vim`)
 
 ## netrw (File Explorer)
-- `:Ex`, `:Explore`, or `<Leader>pv` (custom): Open netrw  
+- `:Ex`, `:Explore`, or `<leader>pv` (custom): Open netrw  
 - `<Enter>`: Open selected file or directory
 - `o`: Open file/directory in a horizontal split
 - `v`: Open file/directory in a vertical split
