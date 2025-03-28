@@ -61,4 +61,9 @@ vim.opt.wildignore:append("*/node_modules/*") -- Ignore node_modules
 -- Format
 vim.opt.formatoptions:append("r")    -- Continue comments with `*`
 
-
+-- File Types
+vim.filetype.add({
+    pattern = {
+        [".*%.blade%.php"] = "blade",
+    },
+})

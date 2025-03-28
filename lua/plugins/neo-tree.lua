@@ -1,6 +1,6 @@
-if true then
-	return {}
-end
+-- if true then
+-- 	return {}
+-- end
 
 return {
 	-- If you want neo-tree's file operations to work with LSP (updating imports, etc.), you can use a plugin like
@@ -18,6 +18,9 @@ return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
+		keys = {
+			{ "<leader>e", "<cmd>Neotree reveal<CR>", desc = "Open Neo-tree (file explorer)" },
+		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -76,8 +79,8 @@ return {
 				enable_diagnostics = true,
 				open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes
 				open_files_using_relative_paths = false,
-				sort_case_insensitive = false,                         -- used when sorting files and directories in the tree
-				sort_function = nil,                                   -- use a custom function for sorting files and directories in the tree
+				sort_case_insensitive = false, -- used when sorting files and directories in the tree
+				sort_function = nil, -- use a custom function for sorting files and directories in the tree
 				-- sort_function = function (a,b)
 				--       if a.type == b.type then
 				--           return a.path > b.path
@@ -277,7 +280,7 @@ return {
 						},
 					},
 					follow_current_file = {
-						enabled = false,     -- This will find and focus the file in the active buffer every time
+						enabled = false, -- This will find and focus the file in the active buffer every time
 						--               -- the current file is changed while the tree is open.
 						leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
 					},
@@ -382,8 +385,6 @@ return {
 					},
 				},
 			})
-
-			vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal<CR>")
 		end,
 	},
 }
