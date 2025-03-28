@@ -8,6 +8,10 @@ git clone https://github.com/ndy-s/nvim-config "${XDG_CONFIG_HOME:-$HOME/.config
 ```
 This will install my customized Neovim configuration with sensible defaults and useful plugins.
 
+## Configuration
+- `init.lua`: Recommended Neovim configuration file (located at `~/.config/nvim/init.lua`)
+- `init.vim`: Legacy or alternative configuration file (located at `~/.config/nvim/init.vim`)
+
 ## netrw (File Explorer)
 - `:Ex`, `:Explore`, or `<Leader>pv` (custom): Open netrw  
 - `<Enter>`: Open selected file or directory
@@ -27,6 +31,12 @@ This will install my customized Neovim configuration with sensible defaults and 
 - `mc`: Copy marked files
 - `mm`: Move marked files
 - `md`: Delete marked files
+
+## Motion Formula
+```
+operator + [count/number] + motion
+```
+Examples: `d2w` (delete 2 words), `c3e` (change 3 words to end)
 
 ## Navigation
 - `Ctrl-]`: Jump to definition or references
@@ -66,12 +76,6 @@ This will install my customized Neovim configuration with sensible defaults and 
 - `u`: Undo last change
 - `U`: Undo all changes on current line
 - `Ctrl+r`: Redo undone change
-
-### Motion Formula
-```
-operator + [count/number] + motion
-```
-Examples: `d2w` (delete 2 words), `c3e` (change 3 words to end)
 
 ## Copy & Pasting
 - `y`: Yank (copy) selected text or motion (e.g., `yw` to yank a word)
@@ -135,6 +139,3 @@ Examples: `d2w` (delete 2 words), `c3e` (change 3 words to end)
 
 ## Saving Selection
 - `v<select>` + `:'<,'>w TEST`: Save selected text to a new file named `TEST`
-
-## Configuration
-- `init.vim`: Neovim configuration file (typically at `~/.config/nvim/init.vim`)
