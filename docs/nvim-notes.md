@@ -1,12 +1,32 @@
-# Neovim Cheat Sheet
+# My Neovim Notes
 A personalized quick-reference guide for mastering Neovim’s essential commands and workflows.
 
-## **Setup**
-To install and configure Neovim with [kickstart.nvim](https://github.com/ndy-s/kickstart.nvim), run:  
+## Setup
+This Neovim setup is based on my personal configuration, available at [nvim-config](https://github.com/ndy-s/nvim-config).
 ```sh
-git clone https://github.com/ndy-s/kickstart.nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/ndy-s/nvim-config "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
-This will set up a basic Neovim configuration with sensible defaults.  
+This will install my customized Neovim configuration with sensible defaults and useful plugins.
+
+## netrw (File Explorer)
+- `:Ex`, `:Explore`, or `<Leader>pv` (custom): Open netrw  
+- `<Enter>`: Open selected file or directory
+- `o`: Open file/directory in a horizontal split
+- `v`: Open file/directory in a vertical split
+- `t`: Open file/directory in a new tab
+- `r`: Rename file/directory
+- `%`: Create a new file
+- `d`: Create a new directory
+- `D`: Delete selected file/directory
+- `R`: Refresh the file list
+- `~`: Go to home directory
+- `-` or `u`: Go up one directory
+- `gh`: Toggle hidden files
+- `mf`: Mark file (for batch operation)
+- `mF`: Unmark all marked files
+- `mc`: Copy marked files
+- `mm`: Move marked files
+- `md`: Delete marked files
 
 ## Navigation
 - `Ctrl-]`: Jump to definition or references
