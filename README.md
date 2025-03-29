@@ -1,5 +1,5 @@
 # My Neovim Config
-This is my Neovim setup built using Lua designed to boost my workflow and productivity, as it's blazingly faster than any other IDE I've used. For LSP, Treesitter, formatting, and debugging, it currently supports Shell, Lua, JavaScript, TypeScript, PHP, and Java. It's also easy to customize if you need to add support for more languages or adjust it to fit your specific needs.
+This is my custom Neovim setup, built with Lua, designed to enhance my workflow and productivity. It offers exceptional speed, outperforming other IDEs I have used, and is highly customizable to meet my specific needs and preferences. The configuration supports LSP, Treesitter, formatting, and debugging for languages such as Shell, Lua, JavaScript, TypeScript, PHP, and Java. Additionally, it is easy to extend and adapt, allowing for seamless integration of additional languages and features.
 
 ## Preview
 Here’s a preview of what my Neovim setup looks like in action:
