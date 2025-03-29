@@ -1,5 +1,5 @@
 # My Neovim Config
-This setup is designed to maximize productivity and streamline the editing experience.
+I created this setup to boost my workflow and productivity. It currently supports Shell, Lua, JavaScript, TypeScript, PHP, and Java. It's easy to customize if you need to add support for more languages or adjust it to fit your specific needs.
 
 ## Installation
 To install my Neovim configuration, simply clone the repository and symlink it to your Neovim config directory:
