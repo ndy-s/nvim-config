@@ -17,9 +17,22 @@ return {
 
         null_ls.setup({
             sources = {
+                -- Text
                 null_ls.builtins.completion.spell,
+
+                -- Sh, Bash
+                null_ls.builtins.formatting.shfmt,
+
+                -- Lua
                 null_ls.builtins.formatting.stylua,
+
+                -- JS, TS
                 require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
+
+                -- PHP, Blade
+                null_ls.builtins.diagnostics.phpstan,
+                null_ls.builtins.formatting.pint,
+                null_ls.builtins.formatting.blade_formatter,
             },
         })
     end,

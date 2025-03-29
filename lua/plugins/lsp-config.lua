@@ -45,7 +45,8 @@ return {
 					"luacheck",
 					"eslint_d",
 					"pint",
-					"php-cs-fixer",
+                    "phpstan",
+					-- "php-cs-fixer",
 					"blade-formatter",
 				},
 
@@ -94,7 +95,8 @@ return {
 		"neovim/nvim-lspconfig",
 		keys = {
 			{ "K", vim.lsp.buf.hover, mode = "n", desc = "LSP Hover" },
-			{ "gd", vim.lsp.buf.definition, mode = "n", desc = "Go to Definition" },
+			{ "<leader>gd", vim.lsp.buf.definition, mode = "n", desc = "Go to Definition" },
+            { "<leader>gr", vim.lsp.buf.references, mode = "n", desc = "Find References"},
 			{ "<leader>a", vim.lsp.buf.code_action, mode = { "n", "v" }, desc = "Code Action" },
 		},
 		config = function()

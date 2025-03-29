@@ -7,8 +7,8 @@ local keymap = vim.keymap
 keymap.set("n", "+", "<C-a>", { desc = "Increment number" })
 keymap.set("n", "-", "<C-x>", { desc = "Decrement number" })
 keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" }) -- Note: may conflict with increment
-keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-keymap.set({ "n", "v" }, "<leader>Y", [["+Y]], { desc = "Yank line to system clipboard" })
+keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank/Copy to system clipboard" })
+keymap.set({ "n", "v" }, "<leader>Y", [["+Y]], { desc = "Yank/Copy line to system clipboard" })
 
 -- Split Windows
 keymap.set("n", "<leader>ws", ":split<CR>", { desc = "Horizontal Split" })
