@@ -1,5 +1,5 @@
 # My Neovim Config
-This is my custom Neovim setup, built with Lua, designed to improve my workflow and productivity. It offers exceptional speed, outperforming other IDEs I have used, and is highly customizable to meet my specific needs and preferences. The configuration supports LSP, Treesitter, formatting, and debugging for Shell, Lua, JavaScript, TypeScript, PHP, and Java. It's also easy to add support for more languages and features as needed.
+This is my personal Neovim setup built entirely in Lua. It's designed to boost productivity, provide a smooth developer experience, and remain lightweight compared to full-featured IDEs. The configuration includes built-in support for LSP, Treesitter, formatting, and debugging for common languages like Shell, Lua, JavaScript, TypeScript, PHP, and Java. It is easy to extend, so you can quickly add support for more languages or features as your needs grow.
 
 ## Preview
 Here’s a preview of what my Neovim setup looks like in action:
@@ -17,69 +17,9 @@ git clone https://github.com/ndy-s/nvim-config.git ~/.config/nvim
 This will ensure that your Neovim setup is configured with my custom settings, plugins, and keymaps.
 
 ## Setup & Plugins
-
 For full keymaps reference: [My Neovim Notes](https://github.com/ndy-s/nvim-config/blob/main/docs/nvim-notes.md)
 
-### Plugin Highlights
-
-#### Plugin Manager:
-- `lazy.nvim`
-
-#### UI:
-- `alpha-nvim` (dashboard)
-- `lualine.nvim` (statusline)
-- `sonokai` (colorscheme)
-- `nvim-web-devicons`
-- `which-key.nvim`
-- `telescope.nvim`
-- `telescope-ui-select.nvim`
-
-#### Navigation:
-- `harpoon`
-- `neo-tree.nvim`
-- `nvim-window-picker`
-
-#### LSP:
-- `nvim-lspconfig`
-- `lspkind.nvim`
-- `mason.nvim`
-- `mason-lspconfig.nvim`
-- `mfussenegger/nvim-jdtls` (Java LSP)
-- `none-ls.nvim`
-
-#### Formatter & Tools:
-- `mason-tool-installer.nvim` installs:
-    - `shfmt`, `shellcheck`
-    - `stylua`, `luacheck`
-    - `eslint_d`
-    - `pint`, `phpstan`, `blade-formatter`
-    - `google-java-format`
-
-#### Completion & Snippets:
-- `nvim-cmp`
-- `cmp-buffer`, `cmp-nvim-lsp`, `cmp-nvim-lua`, `cmp-path`
-- `cmp_luasnip`
-- `LuaSnip`, `friendly-snippets`
-
-#### Framework Support:
-- `laravel.nvim`
-- `blade-nav.nvim`
-
-#### Debugger:
-- `nvim-dap` (core)
-- `nvim-dap-ui` (UI)
-- `nvim-nio`
-- PHP: `xdebug/vscode-php-debug`
-- Java: `java-debug-adapter`
-
-#### Others:
-- `plenary.nvim`
-- `vim-be-good`
-- `undotree`
-- `vim-dotenv`
-- `mini.hipatterns`
-- `Comment.nvim`
-- `nvim-autopairs`
+All plugins used in this setup are organized inside the `lua/plugins` folder for easy maintenance and scalability. You can browse them directly to see what's included and how they are configured.
 
 ## FAQ
 How do I update this config? Simply pull the latest changes from the repository:
