@@ -1,5 +1,5 @@
 # My Neovim Config
-I created this setup to boost my workflow and productivity. It currently supports Shell, Lua, JavaScript, TypeScript, PHP, and Java. It's easy to customize if you need to add support for more languages or adjust it to fit your specific needs.
+This is my Neovim setup built using Lua designed to boost my workflow and productivity, as it's blazingly faster than any other IDE I've used. For LSP, Treesitter, formatting, and debugging, it currently supports Shell, Lua, JavaScript, TypeScript, PHP, and Java. It's also easy to customize if you need to add support for more languages or adjust it to fit your specific needs.
 
 ## Preview
 Here’s a preview of what my Neovim setup looks like in action:
@@ -16,11 +16,60 @@ git clone https://github.com/ndy-s/nvim-config.git ~/.config/nvim
 ```
 This will ensure that your Neovim setup is configured with my custom settings, plugins, and keymaps.
 
-## Keymaps
-For default and custom keymaps that I use in my Neovim setup, refer to the [My Neovim Notes](https://github.com/ndy-s/nvim-config/blob/main/docs/nvim-notes.md).
+## Setup
+For default and custom keymaps that I use in my Neovim setup, refer to the [My Neovim Notes](https://github.com/ndy-s/nvim-config/blob/main/docs/nvim-notes.md). Below are the plugins I use in my Neovim setup, organized by category:
 
-## Plugins
-Here are the plugins I use in my Neovim setup, organized by category:
+### **Plugin Management**
+- **[lazy.nvim](https://github.com/folke/lazy.nvim)**  
+  A fast plugin manager for Neovim.
+
+### **User Interface and UI Enhancements**
+- **[alpha-nvim](https://github.com/goolord/alpha-nvim)**  
+  A simple dashboard for Neovim.
+
+- **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**  
+  A status line for Neovim.
+
+- **[sonokai](https://github.com/sainnhe/sonokai)**  
+  A vibrant color scheme for Neovim.
+
+- **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)**  
+  Fuzzy finder for Neovim.
+
+- **[telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim)**  
+  Extension for UI selection in Telescope.
+
+- **[which-key.nvim](https://github.com/folke/which-key.nvim)**  
+  Displays available keybindings in a popup.
+
+- **[nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)**  
+  Adds file type icons to Neovim.
+
+### **Navigation**
+- **[harpoon](https://github.com/ThePrimeagen/harpoon)**  
+  Easily navigate between files.
+
+- **[neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)**  
+  File explorer for Neovim.
+
+- **[nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)**  
+  Window picker for Neovim.
+
+### **LSP and Language Support**
+- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**  
+  Quickstart configurations for Neovim’s built-in LSP client.
+
+- **[lspkind.nvim](https://github.com/onsails/lspkind.nvim)**  
+  Adds icons to Neovim LSP completion items.
+
+- **[mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)**  
+  LSP server installer for Neovim.
+
+- **[mason.nvim](https://github.com/williamboman/mason.nvim)**  
+  A package manager for Neovim to install LSP servers.
+
+- **[none-ls.nvim](https://github.com/jay-babu/none-ls.nvim)**  
+  LSP support for external tools.
 
 ### **Completion and Snippets**
 - **[nvim-cmp](https://github.com/hrsh7th/nvim-cmp)**  
@@ -47,53 +96,12 @@ Here are the plugins I use in my Neovim setup, organized by category:
 - **[LuaSnip](https://github.com/L3MON4D3/LuaSnip)**  
   Snippet engine for Neovim written in Lua.
 
-### **LSP and Language Support**
-- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**  
-  Quickstart configurations for Neovim’s built-in LSP client.
-
-- **[lspkind.nvim](https://github.com/onsails/lspkind.nvim)**  
-  Adds icons to Neovim LSP completion items.
-
-- **[mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)**  
-  LSP server installer for Neovim.
-
-- **[mason.nvim](https://github.com/williamboman/mason.nvim)**  
-  A package manager for Neovim to install LSP servers.
-
-- **[none-ls.nvim](https://github.com/jay-babu/none-ls.nvim)**  
-  LSP support for external tools.
-
-### **Navigation**
-- **[harpoon](https://github.com/ThePrimeagen/harpoon)**  
-  Easily navigate between files.
-
-- **[neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)**  
-  File explorer for Neovim.
-
-- **[nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)**  
-  Window picker for Neovim.
-
-### **User Interface and UI Enhancements**
-- **[alpha-nvim](https://github.com/goolord/alpha-nvim)**  
-  A simple dashboard for Neovim.
-
-- **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**  
-  A status line for Neovim.
-
-- **[sonokai](https://github.com/sainnhe/sonokai)**  
-  A vibrant color scheme for Neovim.
-
-- **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)**  
-  Fuzzy finder for Neovim.
-
-- **[telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim)**  
-  Extension for UI selection in Telescope.
-
-- **[which-key.nvim](https://github.com/folke/which-key.nvim)**  
-  Displays available keybindings in a popup.
-
-- **[nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)**  
-  Adds file type icons to Neovim.
+### **Framework**
+- **[laravel.nvim](https://github.com/adalessa/laravel.nvim)**  
+  Laravel framework specific configuration for Neovim.
+  
+- **[blade-nav.nvim](https://github.com/RicardoRamirezR/blade-nav.nvim)**  
+  A navigation plugin.
 
 ### **Utilities and Tools**
 - **[plenary.nvim](https://github.com/nvim-lua/plenary.nvim)**  
@@ -111,25 +119,13 @@ Here are the plugins I use in my Neovim setup, organized by category:
 - **[mini.hipatterns](https://github.com/echasnovski/mini.nvim)**  
   Common patterns for Lua functions in Neovim.
 
-### **Plugin Management**
-- **[lazy.nvim](https://github.com/folke/lazy.nvim)**  
-  A fast plugin manager for Neovim.
-
-### **Framework**
-- **[laravel.nvim](https://github.com/adalessa/laravel.nvim)**  
-  Laravel framework specific configuration for Neovim.
-  
-- **[blade-nav.nvim](https://github.com/RicardoRamirezR/blade-nav.nvim)**  
-  A navigation plugin.
-
-### **Others**
 - **[Comment.nvim](https://github.com/numToStr/Comment.nvim)**  
   Provides easy commenting functionality.
 
 - **[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**  
   Automatically inserts matching brackets, parentheses, and quotes.
 
-_And many more plugins may be added as this configuration is updated (last update: 2025-03-29)._
+_And many more plugins may be added as this configuration is updated._
 
 ## FAQ
 How do I update this config? Simply pull the latest changes from the repository:
