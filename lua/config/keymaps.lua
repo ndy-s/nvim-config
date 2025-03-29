@@ -28,17 +28,17 @@ keymap.set("n", "<leader>wL", "<C-w>L", { desc = "Move window to right" })
 
 -- Dramatic Arrow Warnings
 local messages = {
-	"You can't rely on arrows forever...",
-	"Master the blade... I mean, hjkl!",
-	"The elders frown upon your weakness.",
-	"Your training is incomplete, young one.",
-	"Believe in the hjkl within you.",
-	"With every step, you grow stronger — use hjkl.",
+    "Arrows are a crutch—use hjkl instead.",
+    "Level up your skills with hjkl mastery.",
+    "Team expects better: ditch arrows for hjkl.",
+    "Your hjkl proficiency needs work.",
+    "Hjkl’s the pro move—start using it.",
+    "Progress tracked: switch to hjkl already.",
 }
 
 local function dramatic_warning()
-	local msg = messages[math.random(#messages)]
-	vim.api.nvim_echo({ { msg, "WarningMsg" } }, false, {})
+    local msg = messages[math.random(#messages)]
+    vim.api.nvim_echo({ { msg, "WarningMsg" } }, false, {})
 end
 
 keymap.set({ "n", "i", "v" }, "<Up>", dramatic_warning)

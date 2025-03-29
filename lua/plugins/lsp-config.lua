@@ -17,6 +17,7 @@ return {
 					"html",
 					"cssls",
 					"tailwindcss",
+                    "jdtls",
 				},
 			})
 		end,
@@ -48,6 +49,8 @@ return {
                     "phpstan",
 					-- "php-cs-fixer",
 					"blade-formatter",
+                    "google-java-format",
+                    "java-debug-adapter",
 				},
 
 				-- if set to true this will check each tool for updates. If updates
@@ -93,6 +96,9 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+        dependencies = {
+            "mfussenegger/nvim-jdtls",
+        },
 		keys = {
 			{ "K", vim.lsp.buf.hover, mode = "n", desc = "LSP Hover" },
 			{ "<leader>gd", vim.lsp.buf.definition, mode = "n", desc = "Go to Definition" },
@@ -112,6 +118,7 @@ return {
 				"html",
 				"cssls",
 				"tailwindcss",
+                "jdtls",
 			}
 
 			for _, server in ipairs(servers) do
