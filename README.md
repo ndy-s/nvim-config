@@ -1,13 +1,6 @@
 # My Neovim Config
 I created this setup to boost my workflow and productivity. It currently supports Shell, Lua, JavaScript, TypeScript, PHP, and Java. It's easy to customize if you need to add support for more languages or adjust it to fit your specific needs.
 
-## Installation
-To install my Neovim configuration, simply clone the repository and symlink it to your Neovim config directory:
-```sh
-git clone https://github.com/ndy-s/nvim-config.git ~/.config/nvim
-```
-This will ensure that your Neovim setup is configured with my custom settings, plugins, and keymaps.
-
 ## Preview
 Here’s a preview of what my Neovim setup looks like in action:
 
@@ -16,8 +9,15 @@ Here’s a preview of what my Neovim setup looks like in action:
   <img src="https://github.com/user-attachments/assets/df7aa2e9-77db-4091-b02e-eb7fdaa531f5" alt="image 2" width="45%">
 </p>
 
+## Installation
+To install my Neovim configuration, simply clone the repository and symlink it to your Neovim config directory:
+```sh
+git clone https://github.com/ndy-s/nvim-config.git ~/.config/nvim
+```
+This will ensure that your Neovim setup is configured with my custom settings, plugins, and keymaps.
+
 ## Keymaps
-For all default and custom keymaps that I use in my Neovim setup, refer to the [My Neovim Notes](https://github.com/ndy-s/nvim-config/blob/main/docs/nvim-notes.md).
+For default and custom keymaps that I use in my Neovim setup, refer to the [My Neovim Notes](https://github.com/ndy-s/nvim-config/blob/main/docs/nvim-notes.md).
 
 ## Plugins
 Here are the plugins I use in my Neovim setup, organized by category:
