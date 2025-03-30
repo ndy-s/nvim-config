@@ -18,8 +18,10 @@ return {
     config = function()
         local wk = require("which-key")
         wk.add({
+            { "<leader>c", group = "Code (Diagnostics)"},
             { "<leader>d", group = "Debugger (DAP)" },
             { "<leader>g", group = "Code Navigation (LSP GoTo)" },
+            { "<leader>t", group = "Test Runner" },
             { "<leader>w", group = "Window Management" },
         })
     end,

@@ -1,36 +1,27 @@
 -- PHP & Blade
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "blade",
-	callback = function()
-		require("luasnip").filetype_extend("blade", { "html", "php" })
-	end,
+    pattern = "blade",
+    callback = function()
+        -- Check if the extension has already been applied to this buffer
+        if not vim.b.blade_snippets_extended then
+            require("luasnip").filetype_extend("blade", { "html", "php" })
+            -- Mark the extension as applied
+            vim.b.blade_snippets_extended = true
+        end
+    end,
 })
 
 -- Java
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "java",
-	callback = function()
-		local jdtls = require("jdtls")
-		local home = os.getenv("HOME")
-		local workspace_dir = home .. "/.local/share/eclipse/" .. vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-
-		local bundles = vim.split(
-			vim.fn.glob(
-				home
-					.. "/.local/share/java-debug/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar",
-				1
-			),
-			"\n"
-		)
-
-		jdtls.start_or_attach({
-			cmd = { vim.fn.stdpath("data") .. "/mason/bin/jdtls" },
-			root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew" }),
-			workspace_folder = workspace_dir,
-			capabilities = require("cmp_nvim_lsp").default_capabilities(),
-			init_options = {
-				bundles = bundles,
-			},
-		})
-	end,
+    pattern = "java",
+    callback = function()
+        -- Prevent reloading if jdtls is already attached
+        local clients = vim.lsp.get_clients()
+        for _, client in ipairs(clients) do
+            if client.name == "jdtls" then
+                return
+            end
+        end
+        require("ftplugin.java")
+    end,
 })
