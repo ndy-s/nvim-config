@@ -10,6 +10,16 @@ keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" }) -- Note: may confl
 keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
 keymap.set({ "n", "v" }, "<leader>Y", [["+Y]], { desc = "Yank line to system clipboard" })
 
+-- Search and Replace
+keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word under cursor" })
+
+-- File Permissions
+keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Make file executable", silent = true })
+
+-- Move selected lines in Visual Mode
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
+
 -- Split Windows
 keymap.set("n", "<leader>ws", ":split<CR>", { desc = "Horizontal Split" })
 keymap.set("n", "<leader>wv", ":vsplit<CR>", { desc = "Vertical Split" })
