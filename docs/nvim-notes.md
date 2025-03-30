@@ -69,6 +69,10 @@ Examples:
 - `<leader>wK`**(custom)** → Move window up
 - `<leader>wL`**(custom)** → Move window right
 
+## Code Navigation
+- `<leader>gd` **(custom)** → Go to definition
+- `<leader>gr` **(custom)** → Go to references
+
 ## Editing
 - `i` → Insert before cursor  
 - `a` → Append after cursor  
