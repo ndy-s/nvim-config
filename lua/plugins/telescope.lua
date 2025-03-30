@@ -7,11 +7,6 @@ return {
             local builtin = require("telescope.builtin")
 
             -- Telescope Keymaps (Grouped under <leader>s for Search)
-            local wk = require("which-key")
-            wk.add({
-                { "<leader>s", group = "Telescope (Search)" },
-            })
-
             vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Telescope find files" })
             vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "Telescope live grep" })
             vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "Telescope buffers" })
