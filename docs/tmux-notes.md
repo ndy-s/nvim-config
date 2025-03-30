@@ -2,13 +2,12 @@
 A personalized quick-reference guide for mastering Tmux's essential commands and workflows.
 
 ## Setup
-To install Tmux, run:
+To install [Tmux](https://github.com/tmux/tmux), run:
 ```sh
 git clone https://github.com/tmux/tmux.git
 ```
 
-To install Tmuxifier, run:
-
+To install [Tmuxifier](https://github.com/jimeh/tmuxifier), run:
 ```sh
 git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 echo 'export PATH="$HOME/.tmuxifier/bin:$PATH"' >> ~/.bashrc
@@ -24,7 +23,6 @@ source ~/.bashrc
 - `<C-x>` **(custom)** → The leader key for Tmux shortcuts in this setup.
 
 ## Sessions
-
 - `<C-x>s` → List sessions
 - `<C-x>$` → Rename session
 - `<C-x>d` → Detach from session
@@ -36,10 +34,9 @@ source ~/.bashrc
 - `tmux new -s <name>` → Create new session
 - `tmux attach -t <name>` → Attach to a session
 - `tmux kill-session -t <name>` → Kill a session
-- `tmux list-sessions` → List all sessions
+- `tmux list-sessions` or `tmux ls` → List all sessions
 
 ## Windows
-
 - `<C-x>c` → Create new window
 - `<C-x>n` → Next window
 - `<C-x>p` → Previous window
@@ -51,7 +48,6 @@ source ~/.bashrc
 - `tmux select-window -t <num>` → Switch to a window
 
 ## Panes
-
 - `<C-x>%` → Split vertically
 - `<C-x>"` → Split horizontally
 - `<C-x>h` → Move to left pane
@@ -70,7 +66,6 @@ source ~/.bashrc
 - `tmux split-window -v` → Split vertically
 
 ## Copy & Paste Mode
-
 - `<C-x>[` → Enter copy mode
 - `<C-x>]` → Paste buffer
 - `<C-x>#` → List buffers
@@ -78,26 +73,22 @@ source ~/.bashrc
 - `<C-x>c` → Clear buffer
 
 ## Synchronizing Panes
-
 - `<C-x>y` → Toggle pane synchronization
 - `tmux setw synchronize-panes on` → Enable sync mode
 - `tmux setw synchronize-panes off` → Disable sync mode
 
 ## Miscellaneous
-
 - `<C-x>m` → Toggle mouse mode
 - `<C-x>u` → Undo last command
 - `<C-x>t` → Open terminal in new pane
 
 ## Quitting Tmux
-
 - `<C-x>q` → Kill Tmux server
 - `<C-x>d` → Detach session
 - `tmux kill-server` → Kill the Tmux server
 - `tmux detach` → Detach from a session
 
 ## Tmuxifier Commands
-
 - `tmuxifier load <layout>` → Load a saved layout
 - `tmuxifier list` → List available layouts
 - `tmuxifier edit <layout>` → Edit a layout
