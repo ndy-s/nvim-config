@@ -8,173 +8,206 @@ git clone https://github.com/ndy-s/nvim-config "${XDG_CONFIG_HOME:-$HOME/.config
 ```
 
 ## Configuration
-- `init.lua`: Recommended Neovim configuration file (located at `~/.config/nvim/init.lua`)
-- `init.vim`: Legacy or alternative configuration file (located at `~/.config/nvim/init.vim`)
+- `init.lua` → Recommended Neovim configuration file (located at `~/.config/nvim/init.lua`)
+- `init.vim` → Legacy or alternative configuration file (located at `~/.config/nvim/init.vim`)
 
 ## Key Mapping Symbols  
-- `<C-...>`: Represents pressing `Ctrl` along with another key (e.g., `<C-a>` means `Ctrl + a`).  
-- `<leader>`: The `<leader>` key is a customizable prefix key that allows you to define your own key mappings. In this setup, the leader key is set to `Space` (`<Space>`).
+- `<C-...>` → Represents pressing `Ctrl` along with another key (e.g., `<C-a>` means `Ctrl + a`).  
+- `<leader>`→ The `<leader>` key is a customizable prefix key that allows you to define your own key mappings. In this setup, the leader key is set to `Space` (`<Space>`).
 
 ## netrw (File Explorer)
-- `:Ex`, `:Explore`, or `<leader>pv` **(custom)**: Open netrw  
-- `<Enter>`: Open selected file or directory  
-- `o`: Open file/directory in a horizontal split  
-- `v`: Open file/directory in a vertical split  
-- `t`: Open file/directory in a new tab  
-- `r`: Rename file/directory  
-- `%`: Create a new file  
-- `d`: Create a new directory  
-- `D`: Delete selected file/directory  
-- `R`: Refresh the file list  
-- `~`: Go to home directory  
-- `-` or `u`: Go up one directory  
-- `gh`: Toggle hidden files  
-- `mf`: Mark file (for batch operation)  
-- `mF`: Unmark all marked files  
-- `mc`: Copy marked files  
-- `mm`: Move marked files  
-- `md`: Delete marked files  
+- `:Ex`, `:Explore`, or `<leader>e` **(custom)** → Open netrw  
+- `<Enter>` → Open selected file or directory  
+- `o` → Open file/directory in a horizontal split  
+- `v` → Open file/directory in a vertical split  
+- `t` → Open file/directory in a new tab  
+- `r` → Rename file/directory  
+- `%` → Create a new file  
+- `d` → Create a new directory  
+- `D` → Delete selected file/directory  
+- `R` → Refresh the file list  
+- `~` → Go to home directory  
+- `-` or `u` → Go up one directory  
+- `gh` → Toggle hidden files  
+- `mf` → Mark file (for batch operation)  
+- `mF` → Unmark all marked files  
+- `mc` → Copy marked files  
+- `mm` → Move marked files  
+- `md` → Delete marked files  
 
 ## Motion Formula
 ```
 operator + [count/number] + motion
 ```
 Examples:  
-`d2w` = delete 2 words  
-`c3e` = change 3 words to end  
+`d2w` → delete 2 words  
+`c3e` → change 3 words to end  
 
 ## Navigation
-- `<C-]>`: Jump to definition or references  
-- `<C-o>`: Return to previous location after a jump  
-- `<Enter>`: Open link (in help section)  
-- `K`: Look up documentation for word under cursor  
-- `gg`: Go to first line  
-- `G`: Go to last line  
-- `<number>G`: Go to specific line number  
-- `0`: Start of line  
-- `$`: End of line  
-- `^`: First non-whitespace of line  
-- `%`: Jump to matching `() {}`  
-- `h/j/k/l`: Move left/down/up/right  
-- `<C-g>`: Show file location & status  
-- `<C-w>`: Window navigation  
-- `<leader>wh` **(custom)**: Go to left window
-- `<leader>wj`**(custom)**: Go to lower window
-- `<leader>wk`**(custom)**: Go to upper window
-- `<leader>wl`**(custom)**: Go to right window
-- `:split` or `<leader>ws` **(custom)**: Horizontal split  
-- `:vsplit` or `<leader>wv` **(custom)**: Vertical split
-- `<leader>wH`**(custom)**: Move window left
-- `<leader>wJ`**(custom)**: Move window down
-- `<leader>wK`**(custom)**: Move window up
-- `<leader>wL`**(custom)**: Move window right
+- `<C-]>` → Jump to definition or references  
+- `<C-o>` → Return to previous location after a jump  
+- `<Enter>` → Open link (in help section)  
+- `K` → Look up documentation for word under cursor  
+- `gg` → Go to first line  
+- `G` → Go to last line  
+- `<number>G` → Go to specific line number  
+- `0` → Start of line  
+- `$` → End of line  
+- `^` → First non-whitespace of line  
+- `%` → Jump to matching `() {}`  
+- `h/j/k/l` → Move left/down/up/right  
+- `<C-g>` → Show file location & status  
+- `<C-w>` → Window navigation  
+- `<leader>wh` **(custom)** → Go to left window
+- `<leader>wj`**(custom)** → Go to lower window
+- `<leader>wk`**(custom)** → Go to upper window
+- `<leader>wl`**(custom)** → Go to right window
+- `:split` or `<leader>ws` **(custom)** → Horizontal split  
+- `:vsplit` or `<leader>wv` **(custom)** → Vertical split
+- `<leader>wH`**(custom)** → Move window left
+- `<leader>wJ`**(custom)** → Move window down
+- `<leader>wK`**(custom)** → Move window up
+- `<leader>wL`**(custom)** → Move window right
 
 ## Editing
-- `i`: Insert before cursor  
-- `a`: Append after cursor  
-- `A`: Append at end of line  
-- `o`: New line below  
-- `O`: New line above  
-- `x`: Delete character  
-- `dw`: Delete to next word  
-- `de`: Delete to end of word  
-- `d$`: Delete to end of line  
-- `dd`: Delete current line  
-- `r`: Replace character  
-- `R`: Replace multiple  
-- `ce`: Change to end of word  
-- `c$`: Change to end of line  
-- `cw`: Change to next word  
-- `u`: Undo  
-- `U`: Undo entire line  
+- `i` → Insert before cursor  
+- `a` → Append after cursor  
+- `A` → Append at end of line  
+- `o` → New line below  
+- `O` → New line above  
+- `x` → Delete character  
+- `dw` → Delete to next word  
+- `de` → Delete to end of word  
+- `d$` → Delete to end of line  
+- `dd` → Delete current line  
+- `r` → Replace character  
+- `R` → Replace multiple  
+- `ce` → Change to end of word  
+- `c$` → Change to end of line  
+- `cw` → Change to next word  
+- `u` → Undo  
+- `U` → Undo entire line  
 - `<C-r>`: Redo
-- `+` **(custom)**: Increment number  
-- `-` **(custom)**: Decrement number  
-- `<C-a>` **(custom)**: Select all (`gg<S-v>G`)  
+- `+` **(custom)** → Increment number  
+- `-` **(custom)** → Decrement number  
+- `<C-a>` **(custom)** → Select all (`gg<S-v>G`)
+- `<leader>f` **(custom)** → Format buffer using none-ls
+- `<leader>u` **(custom)** → Toggle UndoTree
 
 ## Copy & Pasting
-- `y`: Yank (copy)
-- `p`: Paste after cursor  
-- `P`: Paste before cursor  
-- `<leader>y` **(custom)**: Yank selected text to system clipboard  
-- `<leader>Y` **(custom)**: Yank line to system clipboard 
+- `y` → Yank (copy)
+- `p` → Paste after cursor  
+- `P` → Paste before cursor  
+- `<leader>y` **(custom)** → Yank selected text to system clipboard  
+- `<leader>Y` **(custom)** → Yank line to system clipboard 
 
 ## Visual Mode
-- `v`: Visual mode (char-wise)  
-- `V`: Visual mode (line-wise)  
+- `v` → Visual mode (char-wise)  
+- `V` → Visual mode (line-wise)  
 
 ## Buffers
-- `:ls`: List buffers  
-- `:b<number>`: Go to buffer  
-- `:bn`: Next buffer  
-- `:bp`: Previous buffer  
-- `:b#`: Switch to last buffer  
-- `:bd`: Delete buffer  
-- `:bufdo bd`: Delete all buffers  
-- `:e <file>`: Open file  
+- `:ls` → List buffers  
+- `:b<number>` → Go to buffer  
+- `:bn` → Next buffer  
+- `:bp` → Previous buffer  
+- `:b#` → Switch to last buffer  
+- `:bd` → Delete buffer  
+- `:bufdo bd` → Delete all buffers  
+- `:e <file>` → Open file  
  
 ## Search
-- `/<search>`: Search forward  
-- `?<search>`: Search backward  
-- `/<search>\c`: Case-insensitive  
-- `n`: Next result  
-- `N`: Previous result
+- `/<search>` → Search forward  
+- `?<search>` → Search backward  
+- `/<search>\c` → Case-insensitive  
+- `n` → Next result  
+- `N` → Previous result
 
 ## Find & Replace
-- `:s/<old>/<new>`: Replace first occurrence on line  
-- `:s/<old>/<new>/g`: Replace all on line  
-- `:<start>,<end>s/<old>/<new>/g`: Replace in range  
-- `:%s/<old>/<new>/g`: Replace in file  
-- `:%s/<old>/<new>/gc`: Replace with confirmation  
+- `:s/<old>/<new>` → Replace first occurrence on line  
+- `:s/<old>/<new>/g` → Replace all on line  
+- `:<start>,<end>s/<old>/<new>/g` → Replace in range  
+- `:%s/<old>/<new>/g` → Replace in file  
+- `:%s/<old>/<new>/gc` → Replace with confirmation  
 
-## Telescope (Fuzzy Finder)
-- `:Telescope find_files` or `<leader>sf` **(custom)**: Open Telescope to find files
-- `:Telescope live_grep` or `<leader>sg` **(custom)**: Open Telescope live grep (search text inside files)
-- `:Telescope buffers` or `<leader>sb` **(custom)**: Open Telescope buffer list
-- `:Telescope help_tags` or `<leader>sh` **(custom)**: Open Telescope help tags
+## Telescope 
+### Fuzzy Finder
+- `:Telescope find_files` or `<leader>sf` **(custom)** → Open Telescope to find files
+- `:Telescope live_grep` or `<leader>sg` **(custom)** → Open Telescope live grep (search text inside files)
+- `:Telescope buffers` or `<leader>sb` **(custom)** → Open Telescope buffer list
+- `:Telescope help_tags` or `<leader>sh` **(custom)** → Open Telescope help tags
+
+### Navigation & Scrolling
+- `<C-n>` → Move next in results  
+- `<C-p>` → Move previous in results  
+- `<C-d>` → Scroll preview down (half-page)  
+- `<C-u>` → Scroll preview up (half-page)
+
+## Debugging
+- `<leader>ca` **(custom)** → Code Action
+- `<leader>dt` **(custom)** → Toggle Breakpoint
+- `<leader>dc` **(custom)** → Continue
+- `<leader>du` **(custom)** → Toggle DAP UI
+- `<leader>dr` **(custom)** → Toggle REPL
+- `<leader>dx` **(custom)** → Terminate
+- `<leader>db` **(custom)** → Clear All Breakpoints
+
+## Java Testing
+- `<leader>tt` **(custom)** → Run nearest test
+- `<leader>tT` **(custom)** → Run all tests in class
+- `<leader>to` **(custom)** → Pick a test to run
+
+## Harpoon
+- `<leader>ha` **(custom)** → Add file to Harpoon
+- `<leader>hh` **(custom)** → Open Harpoon menu (Telescope)
+- `<leader>h1` **(custom)** → Jump to Harpoon file 1
+- `<leader>h2` **(custom)** → Jump to Harpoon file 2
+- `<leader>h3` **(custom)** → Jump to Harpoon file 3
+- `<leader>h4` **(custom)** → Jump to Harpoon file 4
+- `<leader>hn` **(custom)** → Go to next Harpoon file
+- `<leader>hp` **(custom)** → Go to previous Harpoon file
     
 ## File Operations
-- `:r <file>`: Insert file content  
-- `:e`: Edit file + `Tab` for autocomplete  
+- `:r <file>` → Insert file content  
+- `:e` → Edit file + `Tab` for autocomplete  
 
 ## InspectTree
-- `:Inspect`: Show highlight groups  
-- `:InspectTree`: Tree-sitter viewer  
+- `:Inspect` → Show highlight groups  
+- `:InspectTree` → Tree-sitter viewer  
 
 ## Quitting Neovim
-- `:q`: Quit  
-- `:q!`: Force quit  
-- `:wq`: Save & quit  
-- `:x` or `ZZ`: Save if needed & quit  
-- `:qa`: Quit all  
-- `:qa!`: Force quit all
+- `:q` → Quit  
+- `:q!` → Force quit  
+- `:wq` → Save & quit  
+- `:x` or `ZZ` → Save if needed & quit  
+- `:qa` → Quit all  
+- `:qa!` → Force quit all
 
 ## External Commands
-- `:!<command>`: Run shell command  
-- `:r !<command>`: Insert command output  
+- `:!<command>` → Run shell command  
+- `:r !<command>` → Insert command output  
 
 ## Options
-- `:set ic`: Case-insensitive search  
-- `:set hls is`: Highlight & incremental search  
-- `:set noic`: Disable case-insensitive search  
-- `:set invic`: Toggle case-insensitive  
-- `:nohlsearch`: Clear highlights  
+- `:set ic` → Case-insensitive search  
+- `:set hls is` → Highlight & incremental search  
+- `:set noic` → Disable case-insensitive search  
+- `:set invic` → Toggle case-insensitive  
+- `:nohlsearch` → Clear highlights  
 
 ## Help
-- `:help`: Open help  
-- `:help w`: Help for `w`  
+- `:help` → Open help  
+- `:help w` → Help for `w`  
 
 ## Saving Selection
-- `v<select>` + `:'<,'>w TEST`: Save selection to `TEST`  
+- `v<select>` + `:'<,'>w TEST` → Save selection to `TEST`  
 
 ## Keymaps / Remaps
-- `:map`: Show keymaps  
-- `:nmap`: Normal mode maps  
-- `:imap`: Insert mode maps  
-- `:vmap`: Visual mode maps  
-- `:omap`: Operator-pending maps  
-- `:unmap <key>`: Unmap  
-- `:noremap <key>`: Non-recursive map  
-- `:nnoremap <key>`: Non-recursive normal  
-- `:inoremap <key>`: Non-recursive insert  
-- `:vnoremap <key>`: Non-recursive visual  
+- `:map` → Show keymaps  
+- `:nmap` → Normal mode maps  
+- `:imap` → Insert mode maps  
+- `:vmap` → Visual mode maps  
+- `:omap` → Operator-pending maps  
+- `:unmap <key>` → Unmap  
+- `:noremap <key>` → Non-recursive map  
+- `:nnoremap <key>` → Non-recursive normal  
+- `:inoremap <key>` → Non-recursive insert  
+- `:vnoremap <key>` → Non-recursive visual  
