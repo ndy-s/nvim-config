@@ -32,21 +32,6 @@ local on_attach = function(_, bufnr)
     jdtls_dap.setup_dap_main_class_configs()
     jdtls_setup.add_commands()
 
-    -- Key mappings for Java tests
-    local opts = { noremap = true, silent = true, buffer = bufnr }
-
-    vim.keymap.set("n", "<leader>tt", function()
-        require("jdtls").test_nearest_method()
-    end, vim.tbl_extend("force", opts, { desc = "Run nearest test" }))
-
-    vim.keymap.set("n", "<leader>tT", function()
-        require("jdtls").test_class()
-    end, vim.tbl_extend("force", opts, { desc = "Run all tests in class" }))
-
-    vim.keymap.set("n", "<leader>to", function()
-        require("jdtls").pick_test()
-    end, vim.tbl_extend("force", opts, { desc = "Pick a test to run" }))
-
     -- Create a command `:Format` local to the LSP buffer
     -- vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
     --     vim.lsp.buf.format()

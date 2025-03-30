@@ -20,6 +20,12 @@ keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Make file executa
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
 
+-- Navigate vim panes better
+keymap.set("n", "<C-k>", ":wincmd k<CR>")
+keymap.set("n", "<C-j>", ":wincmd j<CR>")
+keymap.set("n", "<C-h>", ":wincmd h<CR>")
+keymap.set("n", "<C-l>", ":wincmd l<CR>")
+
 -- Split Windows
 keymap.set("n", "<leader>ws", ":split<CR>", { desc = "Horizontal Split" })
 keymap.set("n", "<leader>wv", ":vsplit<CR>", { desc = "Vertical Split" })
