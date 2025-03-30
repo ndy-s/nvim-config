@@ -73,7 +73,14 @@ Examples:
 
 ### Code Navigation
 - `<leader>gd` **(custom)** → Go to definition  
-- `<leader>gr` **(custom)** → Go to references 
+- `<leader>gr` **(custom)** → Go to references
+
+### Tmux Navigation
+- `<C-h>` **(custom)** → Move left to the adjacent split/tmux pane  
+- `<C-j>` **(custom)** → Move down to the adjacent split/tmux pane  
+- `<C-k>` **(custom)** → Move up to the adjacent split/tmux pane  
+- `<C-l>` **(custom)** → Move right to the adjacent split/tmux pane  
+- `<C-\>` **(custom)** → Switch back to the previously focused split/tmux pane 
 
 ## Editing
 - `i` → Insert before cursor  
@@ -160,10 +167,12 @@ Examples:
 - `<leader>dx` **(custom)** → Terminate
 - `<leader>db` **(custom)** → Clear All Breakpoints
 
-## Java Testing
-- `<leader>tt` **(custom)** → Run nearest test
-- `<leader>tT` **(custom)** → Run all tests in class
-- `<leader>to` **(custom)** → Pick a test to run
+## Test Runner  
+- `<leader>tt` **(custom)** → Run nearest test  
+- `<leader>tT` **(custom)** → Run all tests in the file  
+- `<leader>ta` **(custom)** → Run the entire test suite  
+- `<leader>tl` **(custom)** → Re-run the last test  
+- `<leader>tg` **(custom)** → Go to the last test file  
 
 ## Harpoon
 - `<leader>ha` **(custom)** → Add file to Harpoon
@@ -174,6 +183,7 @@ Examples:
 - `<leader>h4` **(custom)** → Jump to Harpoon file 4
 - `<leader>hn` **(custom)** → Go to next Harpoon file
 - `<leader>hp` **(custom)** → Go to previous Harpoon file
+- `<C-d>` **(custom)** → Remove the currently selected file from Harpoon while navigating
     
 ## File Operations
 - `:r <file>` → Insert file content  
