@@ -41,7 +41,7 @@ operator + [count/number] + motion
 ```
 Examples:  
 `d2w` → delete 2 words  
-`c3e` → change 3 words to end  
+`c3e` → change 3 words to end
 
 ## Navigation
 - `<C-]>` → Jump to definition or references  
@@ -57,21 +57,23 @@ Examples:
 - `%` → Jump to matching `() {}`  
 - `h/j/k/l` → Move left/down/up/right  
 - `<C-g>` → Show file location & status  
-- `<C-w>` → Window navigation  
-- `<leader>wh` **(custom)** → Go to left window
-- `<leader>wj`**(custom)** → Go to lower window
-- `<leader>wk`**(custom)** → Go to upper window
-- `<leader>wl`**(custom)** → Go to right window
-- `:split` or `<leader>ws` **(custom)** → Horizontal split  
-- `:vsplit` or `<leader>wv` **(custom)** → Vertical split
-- `<leader>wH`**(custom)** → Move window left
-- `<leader>wJ`**(custom)** → Move window down
-- `<leader>wK`**(custom)** → Move window up
-- `<leader>wL`**(custom)** → Move window right
 
-## Code Navigation
-- `<leader>gd` **(custom)** → Go to definition
-- `<leader>gr` **(custom)** → Go to references
+### Window Navigation
+- `<C-w>` → Window navigation  
+- `<leader>wh` **(custom)** → Go to left window  
+- `<leader>wj` **(custom)** → Go to lower window  
+- `<leader>wk` **(custom)** → Go to upper window  
+- `<leader>wl` **(custom)** → Go to right window  
+- `<leader>wH` **(custom)** → Move window left  
+- `<leader>wJ` **(custom)** → Move window down  
+- `<leader>wK` **(custom)** → Move window up  
+- `<leader>wL` **(custom)** → Move window right  
+- `:split` or `<leader>ws` **(custom)** → Horizontal split  
+- `:vsplit` or `<leader>wv` **(custom)** → Vertical split  
+
+### Code Navigation
+- `<leader>gd` **(custom)** → Go to definition  
+- `<leader>gr` **(custom)** → Go to references 
 
 ## Editing
 - `i` → Insert before cursor  
@@ -97,6 +99,8 @@ Examples:
 - `<C-a>` **(custom)** → Select all (`gg<S-v>G`)
 - `<leader>f` **(custom)** → Format buffer using none-ls
 - `<leader>u` **(custom)** → Toggle UndoTree
+- `v` + `J` **(custom)** → Move selected lines down in visual mode
+- `v` + `K` **(custom)** → Move selected lines up in visual mode
 
 ## Copy & Pasting
 - `y` → Yank (copy)
@@ -125,6 +129,7 @@ Examples:
 - `/<search>\c` → Case-insensitive  
 - `n` → Next result  
 - `N` → Previous result
+- `<leader>r` **(custom)** → Search and replace word under cursor
 
 ## Find & Replace
 - `:s/<old>/<new>` → Replace first occurrence on line  
@@ -172,7 +177,8 @@ Examples:
     
 ## File Operations
 - `:r <file>` → Insert file content  
-- `:e` → Edit file + `Tab` for autocomplete  
+- `:e` → Edit file + `Tab` for autocomplete
+- `<leader>x` **(custom)** → Make current file executable
 
 ## InspectTree
 - `:Inspect` → Show highlight groups  
