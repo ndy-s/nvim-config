@@ -89,8 +89,8 @@ source ~/.bashrc
 - `tmux detach` → Detach from a session
 
 ## Tmuxifier Commands
-- `tmuxifier load <layout>` → Load a saved layout
-- `tmuxifier list` → List available layouts
-- `tmuxifier edit <layout>` → Edit a layout
-- `tmuxifier new <layout>` → Create a new layout
+- `tmuxifier load-session <layout>` → Load a saved layout
+- `tmuxifier list-sessions` → List available layouts
+- `tmuxifier edit-session <layout>` → Edit a layout
+- `tmuxifier new-session <layout>` → Create a new layout
 
