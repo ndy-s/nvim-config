@@ -10,6 +10,10 @@ vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
+-- Indentation
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
+
 -- UI
 vim.opt.number = true                -- Show line numbers
 vim.opt.relativenumber = true        -- Relative line numbers

@@ -11,7 +11,8 @@ keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboar
 keymap.set({ "n", "v" }, "<leader>Y", [["+Y]], { desc = "Yank line to system clipboard" })
 
 -- Search and Replace
-keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word under cursor" })
+keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = "Replace word under cursor" })
 
 -- File Permissions
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Make file executable", silent = true })
@@ -42,19 +43,11 @@ keymap.set("n", "<leader>wJ", "<C-w>J", { desc = "Move window to bottom" })
 keymap.set("n", "<leader>wK", "<C-w>K", { desc = "Move window to top" })
 keymap.set("n", "<leader>wL", "<C-w>L", { desc = "Move window to right" })
 
--- Dramatic Arrow Warnings
-local messages = {
-    "Arrows are a crutch—use hjkl instead.",
-    "Level up your skills with hjkl mastery.",
-    "Team expects better: ditch arrows for hjkl.",
-    "Your hjkl proficiency needs work.",
-    "Hjkl’s the pro move—start using it.",
-    "Progress tracked: switch to hjkl already.",
-}
+-- Arrow Key Warning
+local message = "Avoid using arrow keys—use hjkl for efficiency."
 
 local function dramatic_warning()
-    local msg = messages[math.random(#messages)]
-    vim.api.nvim_echo({ { msg, "WarningMsg" } }, false, {})
+    vim.api.nvim_echo({ { message, "WarningMsg" } }, false, {})
 end
 
 keymap.set({ "n", "i", "v" }, "<Up>", dramatic_warning)
