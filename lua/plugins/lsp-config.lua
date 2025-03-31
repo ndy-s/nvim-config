@@ -11,6 +11,7 @@ return {
             require("mason-lspconfig").setup({
                 -- LSP servers
                 ensure_installed = {
+                    "bashls",
                     "lua_ls",
                     "ts_ls",
                     "intelephense",
@@ -128,6 +129,7 @@ return {
 
             -- List all LSP servers
             local servers = {
+                "bashls",
                 "lua_ls",
                 "ts_ls",
                 "intelephense",
