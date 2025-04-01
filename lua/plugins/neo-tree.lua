@@ -1,6 +1,6 @@
--- if true then
--- 	return {}
--- end
+if true then
+	return {}
+end
 
 return {
     -- If you want neo-tree's file operations to work with LSP (updating imports, etc.), you can use a plugin like

@@ -1,8 +1,5 @@
 local keymap = vim.keymap
 
--- File Operations
--- keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Open netrw (file explorer)" })
-
 -- Editing
 keymap.set("n", "+", "<C-a>", { desc = "Increment number" })
 keymap.set("n", "-", "<C-x>", { desc = "Decrement number" })

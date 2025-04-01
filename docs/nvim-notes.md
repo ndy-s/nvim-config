@@ -16,7 +16,7 @@ git clone https://github.com/ndy-s/nvim-config "${XDG_CONFIG_HOME:-$HOME/.config
 - `<leader>`→ The `<leader>` key is a customizable prefix key that allows you to define your own key mappings. In this setup, the leader key is set to `Space` (`<Space>`).
 
 ## netrw (File Explorer)
-- `:Ex`, `:Explore`, or `<leader>e` **(custom)** → Open netrw  
+- `-` **(custom)** → Open parent directory
 - `<Enter>` → Open selected file or directory  
 - `o` → Open file/directory in a horizontal split  
 - `v` → Open file/directory in a vertical split  
