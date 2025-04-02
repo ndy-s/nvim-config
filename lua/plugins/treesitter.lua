@@ -4,13 +4,45 @@ return {
         build = ":TSUpdate",
         config = function()
             local configs = require("nvim-treesitter.configs")
+
             configs.setup({
                 -- A list of parser names, or "all"
                 ensure_installed = {
-                    "vim", "vimdoc", "query", "lua", "bash", "markdown",
-                    "markdown_inline", "regex", "javascript", "typescript",
-                    "jsdoc", "json", "php", "blade", "html", "css", "scss",
-                    "gitignore", "http", "graphql", "java", "javadoc",
+                    -- Core & Scripting Languages
+                    "bash",
+                    "lua",
+                    "javascript",
+                    "typescript",
+                    "php",
+                    "java",
+
+                    -- Web Development
+                    "html",
+                    "css",
+                    "scss",
+                    "blade",
+
+                    -- Data Formats
+                    "json",
+                    "graphql",
+
+                    -- Documentation & Markup
+                    "markdown",
+                    "markdown_inline",
+                    "vimdoc",
+                    "javadoc",
+
+                    -- Version Control & Config Files
+                    "gitignore",
+
+                    -- Treesitter-Specific Languages
+                    "query",
+                    "regex",
+                    "comment",
+
+                    -- Neovim-Specific
+                    "vim",
+                    "http",
                 },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -21,7 +53,7 @@ return {
                 auto_install = true,
 
                 indent = {
-                    enable = true
+                    enable = true,
                 },
 
                 highlight = {
@@ -52,6 +84,16 @@ return {
                     additional_vim_regex_highlighting = { "markdown" },
                 },
             })
-        end
-    }
+
+            local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+            parser_config.blade = {
+                install_info = {
+                    url = "https://github.com/EmranMR/tree-sitter-blade",
+                    files = { "src/parser.c" },
+                    branch = "main",
+                },
+                filetype = "blade"
+            }
+        end,
+    },
 }
