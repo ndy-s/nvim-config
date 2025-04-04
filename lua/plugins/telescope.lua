@@ -9,7 +9,12 @@ return {
 	config = function()
 		require("telescope").setup({
 			extensions = {
-				fzf = {},
+				fzf = {
+                    fuzzy = false,
+                    override_generic_sorter = true,
+                    override_file_sorter = true,
+                    case_mode = "smart_case",
+                },
 				["ui-select"] = {
 					require("telescope.themes").get_dropdown({
 						-- even more opts
@@ -41,6 +46,7 @@ return {
 		-- Telescope Keymaps (Grouped under <leader>s for Search)
 		vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Search files" })
 		vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "Search text (live grep)" })
+        vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "Search diagnostics" })
 		vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "Search open buffers" })
 		vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "Search help tags" })
 		vim.keymap.set("n", "<leader>sn", function()
