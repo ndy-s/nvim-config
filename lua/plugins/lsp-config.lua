@@ -139,8 +139,8 @@ return {
         },
         config = function()
             -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local lspconfig = require("lspconfig")
+            local cmp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             -- List all LSP servers
             local servers = {
@@ -154,21 +154,42 @@ return {
                 -- "jdtls", -- Already started using autocmd
             }
 
+            -- General handler for all listed servers
             for _, server in ipairs(servers) do
-                lspconfig[server].setup({
-                    capabilities = capabilities,
-                })
-            end
+                local opts = {
+                    capabilities = cmp_capabilities,
+                }
 
-            lspconfig.lua_ls.setup({
-                settings = {
-                    Lua = {
-                        hint = {
-                            enable = true, -- Enable inlay hints
+                -- Per-server customization
+                if server == "lua_ls" then
+                    opts.settings = {
+                        Lua = {
+                            hint = {
+                                enable = true, -- Enable inlay hints
+                            },
+                            diagnostics = {
+                                globals = { "vim" },
+                            },
                         },
-                    },
-                },
-            })
+                    }
+                end
+
+                if server == "ts_ls" then
+                    opts.init_options = {
+                        preferences = {
+                            includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all'
+                            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                            includeInlayFunctionParameterTypeHints = true,
+                            includeInlayVariableTypeHints = true,
+                            includeInlayPropertyDeclarationTypeHints = true,
+                            includeInlayFunctionLikeReturnTypeHints = true,
+                            includeInlayEnumMemberValueHints = true,
+                        },
+                    }
+                end
+
+                lspconfig[server].setup(opts)
+            end
 
             local border = {
                 { "╭", "FloatBorder" },
@@ -183,8 +204,6 @@ return {
 
             vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1f2335", blend = 0 })
             vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#565f89", bg = "#1f2335" })
-
-            vim.o.winblend = 10
 
             -- To instead override globally
             local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
