@@ -121,6 +121,12 @@ return {
                 mode = { "n", "v" },
                 desc = "Trigger Code Actions",
             },
+            {
+                "<leader>cd",
+                vim.diagnostic.open_float,
+                mode = { "n", "v" },
+                desc = "Show Code diagnostics",
+            },
         },
         config = function()
             -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
@@ -143,6 +149,30 @@ return {
                 lspconfig[server].setup({
                     capabilities = capabilities,
                 })
+            end
+
+            local border = {
+                { "╭", "FloatBorder" },
+                { "─", "FloatBorder" },
+                { "╮", "FloatBorder" },
+                { "│", "FloatBorder" },
+                { "╯", "FloatBorder" },
+                { "─", "FloatBorder" },
+                { "╰", "FloatBorder" },
+                { "│", "FloatBorder" },
+            }
+
+            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1f2335", blend = 0 })
+            vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#565f89", bg = "#1f2335" })
+
+            vim.o.winblend = 10
+
+            -- To instead override globally
+            local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+            function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+                opts = opts or {}
+                opts.border = opts.border or border
+                return orig_util_open_floating_preview(contents, syntax, opts, ...)
             end
         end,
     },

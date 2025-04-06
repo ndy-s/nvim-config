@@ -151,6 +151,8 @@ Examples:
 - `:Telescope live_grep` or `<leader>sg` **(custom)** → Open Telescope live grep (search text inside files)
 - `:Telescope buffers` or `<leader>sb` **(custom)** → Open Telescope buffer list
 - `:Telescope help_tags` or `<leader>sh` **(custom)** → Open Telescope help tags
+- `<leader>sn` **(custom)** → Search NeoVim config files 
+- `<leader>sp` **(custom)** → Search lazy.nvim installed plugins 
 
 ### Navigation & Scrolling
 - `<C-n>` → Move next in results  
@@ -159,7 +161,8 @@ Examples:
 - `<C-u>` → Scroll preview up (half-page)
 
 ## Debugging
-- `<leader>ca` **(custom)** → Code Action
+- `<leader>ca` **(custom)** → Trigger Code Actions
+- `<leader>cd` **(custom)** → Show Code Diagnostics
 - `<leader>dt` **(custom)** → Toggle Breakpoint
 - `<leader>dc` **(custom)** → Continue
 - `<leader>du` **(custom)** → Toggle DAP UI

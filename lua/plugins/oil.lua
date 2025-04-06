@@ -27,7 +27,7 @@ return {
                 return require("oil").get_cursor_entry() ~= nil
             end)
             -- Open the preview window
-            require("oil").open_preview()
+            -- require("oil").open_preview()
         end, { desc = "Open Oil with preview" })
     end,
 }
