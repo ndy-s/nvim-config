@@ -104,7 +104,7 @@ Examples:
 - `+` **(custom)** → Increment number  
 - `-` **(custom)** → Decrement number  
 - `<C-a>` **(custom)** → Select all (`gg<S-v>G`)
-- `<leader>f` **(custom)** → Format buffer using none-ls
+- `<leader>cf` **(custom)** → Format buffer using none-ls
 - `<leader>u` **(custom)** → Toggle UndoTree
 - `v` + `J` **(custom)** → Move selected lines down in visual mode
 - `v` + `K` **(custom)** → Move selected lines up in visual mode

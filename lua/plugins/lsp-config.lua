@@ -124,9 +124,18 @@ return {
             {
                 "<leader>cd",
                 vim.diagnostic.open_float,
-                mode = { "n", "v" },
+                mode = "n",
                 desc = "Show Code diagnostics",
             },
+            {
+                "<leader>ci",
+                function()
+                    local enabled = vim.lsp.inlay_hint.is_enabled({ bufnr = 0 })
+                    vim.lsp.inlay_hint.enable(not enabled, { bufnr = 0 })
+                end,
+                mode = "n",
+                desc = "Toggle Inlay Hints"
+            }
         },
         config = function()
             -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
@@ -150,6 +159,16 @@ return {
                     capabilities = capabilities,
                 })
             end
+
+            lspconfig.lua_ls.setup({
+                settings = {
+                    Lua = {
+                        hint = {
+                            enable = true, -- Enable inlay hints
+                        },
+                    },
+                },
+            })
 
             local border = {
                 { "╭", "FloatBorder" },

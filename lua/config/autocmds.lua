@@ -205,6 +205,11 @@ vim.api.nvim_create_autocmd("FileType", {
                 -- 		"**/lib/*.jar",
                 -- 	},
                 -- },
+                inlayHints = {
+                    parameterNames = {
+                        enabled = "all", -- Display inlay hints for all methods
+                    }
+                }
             },
         }
 
