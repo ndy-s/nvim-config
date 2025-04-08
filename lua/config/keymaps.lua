@@ -28,6 +28,12 @@ keymap.set("n", "<C-l>", ":wincmd l<CR>")
 keymap.set("n", "<leader>ws", ":split<CR>", { desc = "Horizontal Split" })
 keymap.set("n", "<leader>wv", ":vsplit<CR>", { desc = "Vertical Split" })
 
+-- Resize Windows
+keymap.set("n", "<leader>wrh", ":vertical resize -5<CR>", { desc = "Shrink window width ←" })
+keymap.set("n", "<leader>wrl", ":vertical resize +5<CR>", { desc = "Grow window width →" })
+keymap.set("n", "<leader>wrk", ":resize +2<CR>", { desc = "Grow window height ↑" })
+keymap.set("n", "<leader>wrj", ":resize -2<CR>", { desc = "Shrink window height ↓" })
+
 -- Navigation
 keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to left window" })
 keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Go to lower window" })

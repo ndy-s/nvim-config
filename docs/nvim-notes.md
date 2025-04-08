@@ -46,6 +46,7 @@ Examples:
 ## Navigation
 - `<C-]>` → Jump to definition or references  
 - `<C-o>` → Return to previous location after a jump  
+- `<C-i>` → Go forward to the next location in the jump list (opposite of `<C-o>`)
 - `<Enter>` → Open link (in help section)  
 - `K` → Look up documentation for word under cursor  
 - `gg` → Go to first line  
@@ -70,6 +71,10 @@ Examples:
 - `<leader>wL` **(custom)** → Move window right  
 - `:split` or `<leader>ws` **(custom)** → Horizontal split  
 - `:vsplit` or `<leader>wv` **(custom)** → Vertical split  
+- `<leader>wrh` **(custom)** → Shrink window width ←  
+- `<leader>wrl` **(custom)** → Grow window width →  
+- `<leader>wrk` **(custom)** → Grow window height ↑  
+- `<leader>wrj` **(custom)** → Shrink window height ↓
 
 ### Code Navigation
 - `<leader>gd` **(custom)** → Go to definition  

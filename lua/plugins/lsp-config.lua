@@ -11,6 +11,7 @@ return {
             require("mason-lspconfig").setup({
                 -- LSP servers
                 ensure_installed = {
+                    "lemminx",
                     "bashls",
                     "lua_ls",
                     "ts_ls",
@@ -144,6 +145,7 @@ return {
 
             -- List all LSP servers
             local servers = {
+                "lemminx",
                 "bashls",
                 "lua_ls",
                 "ts_ls",
