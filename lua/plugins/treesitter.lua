@@ -56,6 +56,10 @@ return {
                     enable = true,
                 },
 
+                matchup = {
+                    enable = true,
+                },
+
                 highlight = {
                     -- `false` will disable the whole extension
                     enable = true,
