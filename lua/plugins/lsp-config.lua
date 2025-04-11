@@ -15,7 +15,6 @@ return {
                     "bashls",
                     "lua_ls",
                     "ts_ls",
-                    -- "intelephense",
                     "phpactor",
                     "html",
                     "cssls",
@@ -50,6 +49,7 @@ return {
                     "eslint_d",
                     "pint",
                     "phpstan",
+                    "psalm",
                     "php-debug-adapter",
                     "blade-formatter",
                     "google-java-format",
@@ -150,7 +150,6 @@ return {
                 "bashls",
                 "lua_ls",
                 "ts_ls",
-                -- "intelephense",
                 "phpactor",
                 "html",
                 "cssls",
@@ -190,6 +189,17 @@ return {
                             includeInlayEnumMemberValueHints = true,
                         },
                     }
+                end
+
+                if server == "phpactor" then
+                    opts.init_options = {
+                        ["language_server_phpstan.enabled"] = false,
+                        ["language_server_psalm.enabled"] = false,
+                    }
+
+                    opts.root_dir = function(fname)
+                        return lspconfig.util.root_pattern("composer.json", ".git")(fname)
+                    end
                 end
 
                 lspconfig[server].setup(opts)
