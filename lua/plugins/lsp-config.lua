@@ -194,7 +194,7 @@ return {
                 if server == "phpactor" then
                     opts.init_options = {
                         ["language_server_phpstan.enabled"] = false,
-                        ["language_server_psalm.enabled"] = true,
+                        ["language_server_psalm.enabled"] = false,
                     }
 
                     opts.root_dir = function(fname)
