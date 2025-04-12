@@ -35,7 +35,13 @@ vim.api.nvim_create_autocmd("FileType", {
         local path_to_config = path_to_jdtls .. "/config_linux"
         local lombok_path = path_to_jdtls .. "/lombok.jar"
 
-        local path_to_jar = path_to_jdtls .. "/plugins/org.eclipse.equinox.launcher_1.6.1100.v20250306-0509.jar"
+        local jars = vim.fn.glob(path_to_jdtls .. "/plugins/org.eclipse.equinox.launcher_*.jar", false, true)
+        if vim.tbl_isempty(jars) then
+            vim.notify("Equinox launcher JAR not found in " .. path_to_jdtls .. "/plugins", vim.log.levels.ERROR)
+            return
+        end
+
+        local path_to_jar = jars[1]
 
         local bundles = {
             vim.fn.glob(path_to_jdebug .. "/extension/server/com.microsoft.java.debug.plugin-*.jar", true),
