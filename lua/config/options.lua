@@ -14,7 +14,6 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 
--- UI
 vim.opt.number = true                -- Show line numbers
 vim.opt.relativenumber = true        -- Relative line numbers
 vim.opt.signcolumn = "yes"           -- Always show sign column
