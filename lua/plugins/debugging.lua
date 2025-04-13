@@ -7,42 +7,35 @@ return {
     },
     keys = {
         {
-            "<leader>dt",
+            "<leader>db",
             function()
                 require("dap").toggle_breakpoint()
             end,
             desc = "Toggle Breakpoint",
         },
         {
-            "<leader>dc",
+            "<leader>dn",
             function()
                 require("dap").continue()
             end,
-            desc = "Continue",
+            desc = "Step Over",
         },
         {
-            "<leader>du",
+            "<leader>dd",
             function()
                 require("dapui").toggle()
             end,
             desc = "Toggle DAP UI",
         },
         {
-            "<leader>dr",
-            function()
-                require("dap").repl.toggle()
-            end,
-            desc = "Toggle REPL",
-        },
-        {
             "<leader>dx",
             function()
                 require("dap").terminate()
             end,
-            desc = "Terminate",
+            desc = "Terminate Session",
         },
         {
-            "<leader>db",
+            "<leader>dc",
             function()
                 require("dap").clear_breakpoints()
             end,

@@ -168,12 +168,11 @@ Examples:
 ## Debugging
 - `<leader>ca` **(custom)** → Trigger Code Actions
 - `<leader>cd` **(custom)** → Show Code Diagnostics
-- `<leader>dt` **(custom)** → Toggle Breakpoint
-- `<leader>dc` **(custom)** → Continue
-- `<leader>du` **(custom)** → Toggle DAP UI
-- `<leader>dr` **(custom)** → Toggle REPL
-- `<leader>dx` **(custom)** → Terminate
-- `<leader>db` **(custom)** → Clear All Breakpoints
+- `<leader>db` **(custom)** → Toggle Breakpoint
+- `<leader>dn` **(custom)** → Step Over
+- `<leader>dd` **(custom)** → Toggle DAP UI
+- `<leader>dx` **(custom)** → Terminate Session
+- `<leader>dc` **(custom)** → Clear All Breakpoints
 
 ## Test Runner  
 - `<leader>tt` **(custom)** → Run nearest test  
