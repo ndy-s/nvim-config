@@ -2,7 +2,6 @@ return {
     "nvimtools/none-ls.nvim",
     dependencies = {
         "nvimtools/none-ls-extras.nvim",
-        "gbprod/none-ls-psalm.nvim",
     },
     keys = {
         {
@@ -31,10 +30,9 @@ return {
                 require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
 
                 -- PHP, Blade
-                null_ls.builtins.diagnostics.phpstan,
+                -- null_ls.builtins.diagnostics.phpstan,
                 null_ls.builtins.formatting.pint,
                 null_ls.builtins.formatting.blade_formatter,
-                require("none-ls-psalm.diagnostics"),
             },
         })
     end,
