@@ -5,4 +5,3 @@ require("config.autocmds")
 
 -- Load LazyVim setup
 require("config.lazy")
-
