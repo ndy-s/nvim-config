@@ -100,6 +100,7 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
+        event = "BufReadPre",
         dependencies = {
             "mfussenegger/nvim-jdtls",
         },
