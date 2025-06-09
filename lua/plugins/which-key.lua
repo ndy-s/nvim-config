@@ -24,6 +24,7 @@ return {
 			{ "<leader>c", group = "Code Commands" },
 			{ "<leader>d", group = "Debugger (DAP)" },
 			{ "<leader>g", group = "Code Navigation (LSP GoTo)" },
+			{ "<leader>G", group = "Git" },
 			{ "<leader>h", group = "Harpoon (File Marks)" },
 			{ "<leader>s", group = "Telescope (Search)" },
 			{ "<leader>t", group = "Test Runner" },
